@@ -1,4 +1,26 @@
-body{
-    background-color: #0CAEFE;
+title{
     text-align: center
+}
+ul{
+    display: grid;
+    grid-template: 10px 5px;
+    grid-gap: 15px;
+    justify-content: center
+}
+body{
+    background-color: #d80000;
+    text-align: center;
+    color: aliceblue
+}
+.newplayer{
+    color: white
+}
+.showplayer{
+    color : white
+}
+.nodots{
+    display: grid; 
+    grid-template: 10px 5px;
+    grid-gap: 15px;
+    justify-content: center;
 }

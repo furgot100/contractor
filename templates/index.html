@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
+    <h1>Football App</h1>
+</div>
+<div>
+    <a href="/new" class="newplayer">New Player</a>
 
-<h1>Football App</h1>
+    <ul>
+    {% for player in players %}
+        <div class ="nodots">
+            <a href="/player/{{player._id}}" class="showplayer">{{player.name}}</a><br>
+            <img src="{{player.img_url}}" style="width:250px;height:200px;">
+        </div>
+    {% endfor %}
+    </ul>
+</div>
 
-<a href="/new">New Player</a>
-
-<ul>
-{% for player in players %}
-
-    <li>
-        <a href="/player/{{player._id}}">{{player.name}}</a><br>
-        <img src="{{player.img_url}}" style="width:250px;height:200px;">
-    </li>
-
-{% endfor %}
-</ul>
 
 {% endblock %}
