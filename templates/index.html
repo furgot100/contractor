@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h1>Candies App</h1>
+<h1>Football App</h1>
 
-<a href="/new">New Candy</a>
+<a href="/new">New Player</a>
 
 <ul>
-{% for candy in candies %}
+{% for player in players %}
 
     <li>
-        <a href="/candy/{{candy._id}}">{{candy.name}}</a>
+        <a href="/player/{{player._id}}">{{player.name}}</a>
     </li>
 
 {% endfor %}
