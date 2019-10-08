@@ -10,7 +10,8 @@
 {% for player in players %}
 
     <li>
-        <a href="/player/{{player._id}}">{{player.name}}</a>
+        <a href="/player/{{player._id}}">{{player.name}}</a><br>
+        <img src="{{player.img_url}}" style="width:250px;height:200px;">
     </li>
 
 {% endfor %}
