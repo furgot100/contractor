@@ -37,6 +37,28 @@ class ConstructorTests(TestCase):
         result = self.client.get(f'/player/{sample_player_id}')
         self.assertEqual(result.status, '200 OK')
         self.assertIn(b'Cam newton', result.data)
+    
+    @mock.patch('pymongo.collection.Collection.find_one')
+    def test_edit_player(self, mock_find):
+        mock_find.return_value = sample_player
+
+        result = self.client.get(f'/edit/{sample_player_id}')
+        self.assertEqual(result.status, '200 OK')
+        self.assertIn(b'Cam newton', result.data)
+
+    # @mock.patch('pymongo.collection.Collection.insert_one')
+    # def test_submit_player(self, mock_insert):
+    #     result = self.client.post('/player', data=sample_form_data)
+    #     self.assertEqual(result.status, '302 FOUND')
+    #     mock_insert.assert_called_with(sample_player)
+
+    @mock.patch('pymongo.collection.Collection.delete_one')
+    def test_delete_player(self, mock_delete):
+        form_data = {'_method': 'DELETE'}
+        result = self.client.post(f'/player/{sample_player_id}/delete', data=form_data)
+        self.assertEqual(result.status, '302 FOUND')
+        mock_delete.assert_called_with({'_id': sample_player_id})
+
 
 if __name__ == '__main__':
     unittest_main()
