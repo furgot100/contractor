@@ -10,7 +10,8 @@
     <ul>
     {% for player in players %}
         <div class ="nodots">
-            <a href="/player/{{player._id}}" class="showplayer">{{player.name}}</a><br>
+            <a href="/player/{{player._id}}" class="showplayer">{{player.name}}</a>
+            <br>
             <img src="{{player.img_url}}" style="width:250px;height:200px;">
         </div>
     {% endfor %}

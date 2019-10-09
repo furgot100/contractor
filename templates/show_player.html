@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<a href="/">Back to Home</a>
+<a href="/"class="home">Back to Home</a>
 
 <h1>Player: {{player.name}}</h1>
 
@@ -11,7 +11,7 @@
 Position: {{player.position}}
 
 <br><br>
-<a href="/edit/{{player._id}}">Edit Player</a>
+<a href="/edit/{{player._id}}" class="edit">Edit Player</a>
 
 <br><br>
 <form action="/delete/{{player._id}}" method="POST">
