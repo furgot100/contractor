@@ -2,16 +2,16 @@ title{
     text-align: center
 }
 body{
-    background-color: #d84343;
+    background-color: rgb(252, 77, 77);
     text-align: center;
-    color: #0df2b5
+    color: #1d1d9d
 }
 .newplayer{
-    color: #0df2b5;
+    color: #1d1d9d;
     text-align: center
 }
 .showplayer{
-    color : #0df2b5
+    color : #1d1d9d
 }
 .nodots{
     display: grid; 
@@ -22,8 +22,8 @@ body{
     display: inline-block
 }
 .edit{
-    color:#0df2b5
+    color:#1d1d9d
 }
 .home{
-    color: #0df2b5
+    color: #1d1d9d
 }
